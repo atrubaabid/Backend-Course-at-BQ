@@ -160,6 +160,75 @@
 
 
 
+// THREAD POOL   >>   Background mein kaam karne wale workers ka group.
+
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// MACROTASK & MICROTASK
+
+
+// JavaScript mein 2 types ke tasks hote hain:
+// - Macrotask: Example setTimeout()
+// - Microtask: Example Promise.then()
+
+
+// MACROTASK                       	                        MICROTASK
+// Lower priority                  	                        Higher priority
+// setTimeout()	                                            Promise .then()
+// setInterval()                                            async/await ke baad wala code
+// DOM events, jaise click                                  queueMicrotask()
+// Microtasks ke baad execute hota hai	                    Synchronous code ke baad, next macrotask se pehle execute hota hai
+
+
+// EXAMPLE
+
+// console.log("1");
+
+
+// // MacroTask
+// setTimeout(() => {
+//     console.log("2");
+// }, 0);
+
+
+// // MicroTask
+// Promise.resolve().then(() => {
+//     console.log("3");
+// });
+
+// console.log("4");
+
+
+// OUTPUT   1,4,3,2
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------
+
+
+// LIBUV
+
+// Libuv is a C library used by Node.js to handle asynchronous operations, the event loop, and a thread pool.
+
+// Libuv Node.js ko background tasks handle karne mein help karta hai, jaise files read karna aur kuch other operations, taake JavaScript ko har task ke complete hone ka wait na karna pade.
+
+
+// -------------------------------------------------------------------------------------------------------------------------------
+
+
+// COMPLETED
+
+
+
+
+
+
+
 
 
 
