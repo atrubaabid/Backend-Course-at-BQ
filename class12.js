@@ -1,8 +1,8 @@
 // PARALLELISM & CONCURRENCY
 
-// Concurrency = Multiple tasks ko manage karna; unke darmiyan switching ho sakti hai.
-
 // Parallelism = Multiple tasks ko same time par execute karna.
+
+// Concurrency = Multiple tasks ko manage karna; unke darmiyan switching ho sakti hai.
 
 
 // -------------------------------------------------------------------------------------------------------------------------------
